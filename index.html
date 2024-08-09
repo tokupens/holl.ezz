@@ -1,46 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Joice's Album</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #ff6f61;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+
+        .jumbotron {
+            background-color: #ffb74d;
+            color: white;
+        }
+
+        .album-section {
+            background-color: #f0f4c3;
+            padding: 50px 0;
+        }
+
+        .album-section h2 {
+            color: #8d6e63;
+        }
+
+        .footer {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .photo-album img {
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .photo-album img:hover {
+            transform: scale(1.1);
+        }
+
+        .scroll-up {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            display: none;
+            cursor: pointer;
+        }
+
+        .scroll-up:hover {
+            background-color: #ff3d00;
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Joice's Album</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#album">Album</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
             </ul>
-        </nav>
-        <h1>Gallery of My Girlfriend</h1>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Welcome to the Gallery</h2>
-            <p>This is a collection of beautiful moments.</p>
-        </section>
-        <section id="gallery" class="gallery">
-            <img src="photo1.jpg" alt="Photo 1">
-            <img src="photo2.jpg" alt="Photo 2">
-            <img src="photo3.jpg" alt="Photo 3">
-            <!-- Add more photos as needed -->
-        </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>This gallery is dedicated to showcasing the beauty and moments shared.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>For more information, please contact me at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Name</p>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center" id="home">
+        <h1 class="display-4">Welcome to Joice's World</h1>
+        <p class="lead">Explore the beautiful moments of Joice's life captured in photos.</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="container my-5" id="about">
+        <h2 class="text-center">About Joice</h2>
+        <p class="text-center">Joice is a wonderful person with a bright personality. She loves traveling, photography, and enjoys spending time with loved ones. This album is a collection of her most cherished moments.</p>
+    </div>
+
+    <!-- Album Section -->
+    <div class="album-section" id="album">
+        <div class="container">
+            <h2 class="text-center mb-4">Photo Album</h2>
+            <div class="row photo-album">
+                <div class="col-md-4 mb-4">
+                    <img src="https://via.placeholder.com/350x250" class="img-fluid" alt="Joice's Photo 1">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://via.placeholder.com/350x250" class="img-fluid" alt="Joice's Photo 2">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://via.placeholder.com/350x250" class="img-fluid" alt="Joice's Photo 3">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://via.placeholder.com/350x250" class="img-fluid" alt="Joice's Photo 4">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://via.placeholder.com/350x250" class="img-fluid" alt="Joice's Photo 5">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://via.placeholder.com/350x250" class="img-fluid" alt="Joice's Photo 6">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container my-5" id="contact">
+        <h2 class="text-center">Contact</h2>
+        <p class="text-center">For inquiries or more information, feel free to reach out.</p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">Email: joice@example.com</li>
+                    <li class="list-group-item">Phone: +62 123 456 789</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Up Button -->
+    <div class="scroll-up" id="scrollUp">&#8679;</div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        &copy; 2024 Joice's Album. All rights reserved.
     </footer>
-    <script src="scripts.js"></script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Scroll to Top Button
+        const scrollUp = document.getElementById('scrollUp');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollUp.style.display = 'block';
+            } else {
+                scrollUp.style.display = 'none';
+            }
+        };
+
+        scrollUp.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
 </body>
+
 </html>
